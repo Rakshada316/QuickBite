@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickBite | Food Ordering</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #fff8f1;
+            color: #292524;
+        }
+
+        header {
+            background: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 12px #0000000d;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #f4511e;
+        }
+
+        .tagline {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .hero {
+            background: linear-gradient(120deg, #ffede0, #fff8f1);
+            padding: 45px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 span {
+            color: #f4511e;
+        }
+
+        .hero p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 35px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            align-items: start;
+        }
+
+        .menu, .order-form {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 8px 28px #0000000b;
+        }
+
+        h2 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .food-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .food-icon {
+            width: 55px;
+            height: 55px;
+            background: #fff0e6;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .food-info h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .food-info p {
+            color: #777;
+            font-size: 13px;
+        }
+
+        .badge {
+            margin-left: auto;
+            color: #f4511e;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 15px 0 7px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 9px;
+            font-size: 14px;
+            background: white;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: #f4511e;
+            box-shadow: 0 0 0 3px #f4511e15;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 14px;
+            border: none;
+            border-radius: 9px;
+            background: #f4511e;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #d93d10;
+            transform: translateY(-1px);
+        }
+
+        .note {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+
+        footer {
+            text-align: center;
+            padding: 22px;
+            color: #888;
+            font-size: 13px;
+        }
+
+        @media (max-width: 650px) {
+            header {
+                padding: 18px 5%;
+            }
+
+            .hero h1 {
+                font-size: 29px;
+            }
+
+            .container {
+                grid-template-columns: 1fr;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🍔 QuickBite</div>
+        <div class="tagline">Fresh food, happy mood!</div>
+    </header>
+
+    <section class="hero">
+        <h1>Good Food. <span>Good Mood.</span></h1>
+        <p>Your cravings, our priority. Choose your favourite food<br>
+        and place your order in just a few clicks!</p>
+    </section>
+
+    <main class="container">
+
+        <section class="menu">
+            <h2>🍽️ Explore Our Menu</h2>
+
+            <div class="food-item">
+                <div class="food-icon">🍕</div>
+                <div class="food-info">
+                    <h3>Pizza</h3>
+                    <p>Cheesy, delicious and fresh</p>
+                </div>
+                <span class="badge">POPULAR</span>
+            </div>
+
+            <div class="food-item">
+                <div class="food-icon">🍔</div>
+                <div class="food-info">
+                    <h3>Burger</h3>
+                    <p>Juicy and full of flavour</p>
+                </div>
+            </div>
+
+            <div class="food-item">
+                <div class="food-icon">🥪</div>
+                <div class="food-info">
+                    <h3>Sandwich</h3>
+                    <p>Light, fresh and tasty</p>
+                </div>
+            </div>
+
+            <div class="food-item">
+                <div class="food-icon">🍝</div>
+                <div class="food-info">
+                    <h3>Pasta</h3>
+                    <p>Italian taste in every bite</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="order-form">
+            <h2>🛍️ Place Your Order</h2>
+
+            <form action="/order" method="POST" novalidate>
+
+                <label for="name">Customer Name</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your full name">
+
+                <label for="mobile">Mobile Number</label>
+                <input type="text" id="mobile" name="mobile"
+                       placeholder="Enter 10-digit mobile number">
+
+                <label for="food">Choose Your Food</label>
+                <select id="food" name="food">
+                    <option value="">Select a food item</option>
+                    <option value="Pizza">🍕 Pizza</option>
+                    <option value="Burger">🍔 Burger</option>
+                    <option value="Sandwich">🥪 Sandwich</option>
+                    <option value="Pasta">🍝 Pasta</option>
+                </select>
+
+                <label for="quantity">Quantity (1–10)</label>
+                <input type="number" id="quantity" name="quantity"
+                       placeholder="Enter quantity">
+
+                <button type="submit">Place My Order →</button>
+
+                <p class="note">❤️ Freshly made with love. Happy ordering!</p>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 QuickBite · Online Food Ordering System
+    </footer>
+
+</body>
+</html>
