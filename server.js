@@ -169,15 +169,6 @@ if (errors.length > 0) {
   );
 }
 
-    // Error response
-    if (error) {
-        const details = `<p style="color:#dc2626;font-weight:bold;">${error}</p>`;
-
-        return res.status(400).send(
-            resultPage("Order Failed", error, details, false)
-        );
-    }
-
     // Success response
     const safeName = name.trim().replace(/[&<>"']/g, "");
     const safeFood = food;
